@@ -116,3 +116,19 @@ Change blockId as 15 then forward request with "Source of Truth".
 Observe that any user with lowest privilege can treat & send request as Admin user.
 
 ![alt text](poc.png)
+
+This proves the backend loaded the admin's Source of Truth completions.
+
+### Impact
+
+- Privilege Escalation: Any student can impersonate the behavior of admin blocks.
+
+- Sensitive Information Disclosure: Admin-only prompt completions (e.g., secrets, hints) are exposed.
+
+- Potential Resource Abuse: Admins might configure GPT-4 or high-cost models, which can be triggered by students.
+
+### Discovered by
+
+Onurcan Genç
+Independent Security Researcher
+https://linkedin.com/in/onurcangenc
